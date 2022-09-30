@@ -1,0 +1,51 @@
+body {
+  background-color: rgb(231, 225, 214);
+  font-family: 'Roboto', sans-serif;
+}
+
+header {
+  text-align: center;
+  border-bottom: darkslateblue 2px dotted;
+  padding: 5px;
+}
+
+h1 {
+  color: #1050aa; 
+  font-family: Georgia, 'Times New Roman', Times, serif; 
+  font-size: 2.2em;
+}
+
+h2::first-letter {
+  font-size: 3rem;
+}
+
+#job_title {
+  font-weight: bold;
+}
+
+.experience,.education {
+  border: 2px dashed;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+[href="https://github.com"] {
+  margin-left: 20px;
+}
+
+[href="https://github.com"]:hover {
+  color: crimson;
+}
+
+[href="https://github.com"]::after {
+  content: url('images/GitHub-Mark/PNG/GitHub-Mark-32px.png');
+}
+
+.education > .education_list > li:first-child {
+  font-style: italic;
+}
+
+.skills > ul {
+  list-style-type: none;
+}
+
