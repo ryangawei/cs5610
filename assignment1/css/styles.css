@@ -31,8 +31,18 @@ strong {
 body {
   background-color: var(--global-bg-color);
   font-family: 'Noto Sans', sans-serif;
+  font-weight: 300;
   margin-left: 10vw;
   margin-right: 10vw;
+}
+
+a {
+  color: var(--global-theme-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 /*
@@ -93,11 +103,12 @@ Active navigation item
 } */
 
 .font-weight-bold {
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .post-title {
   /* border: 2px solid green; */
+  font-family: 'Noto Sans JP', sans-serif;
   margin-top: 30px;
   margin-bottom: 0px;
   font-weight: normal;
@@ -119,8 +130,8 @@ Active navigation item
   margin-left: 20px;
   /* border: 2px solid green; */
   
-  max-height: 38%;
-  max-width: 38%;
+  max-height: 370px;
+  max-width: 370px;
 }
 
 /* h2::first-letter {
