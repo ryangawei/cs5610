@@ -26,7 +26,6 @@
 </head>
 
 <body>
-  <!-- Header -->
   <header>
 
     <!-- Nav Bar -->
@@ -34,7 +33,7 @@
       <div class="container">
         <ul class="navbar-nav">
           <!-- About -->
-          <li class="nav-item active">
+          <li class="nav-item">
             <a class="nav-link" href="index.html">about</a>
           </li>
           
@@ -44,7 +43,7 @@
           </li>
 
           <!-- Work Experience -->
-          <li class="nav-item ">
+          <li class="nav-item active">
             <a class="nav-link" href="work_experience.html">work experience</a>
           </li>
         </ul>
@@ -60,45 +59,38 @@
       <p class="desc">MSCS Candidate @ Northeastern University - Vancouver </p>
     </header>
 
-    <article>
-      <div class="profile float-right">
+  <div class="table-responsive">
+    <table class="table-work-experience"> 
+      <tbody>
 
-  <figure class="picture-box">
-    <picture>
-    <!-- Guoao's photos for different screen widths -->
-    <!-- Fallback to the original file -->
-    <img class="profile-picture" src="assets/img/guoao_portrait.jpg" alt="profile-picture">
+        <tr> 
+          <th scope="row">May 2022 - Sep 2022</th>
+          <td>
+            <p class="job-title">Applied Scientist Intern</p>
+            <p class="company"> Alexa AI, Amazon </p>
+            <div>
+              <ul>
+                <li>Built an incremental SQL parser for constraint decoding as part of a text-to-SQL system. The parser is integrated into beam search and provides grammar-schema check that rejects hypotheses with invalid SQLs.</li>
+              </ul>
+            </div>
+          </td>
+        </tr> 
 
-    </picture>
-
-  </figure>
-
-  <div>
-    <p>Hi there! 😃</p>
-    <p>
-      My name is Guoao and I’m an M.S in Computer Science candidate at the 
-      <a href="https://www.khoury.northeastern.edu/" target="_blank" rel="noopener noreferrer">
-      Khoury College of Computer Sciences - Northeastern University</a>.
-    </p>
-
-    <p>
-      Previously, I was an applied scientist intern at <a href="https://www.amazon.jobs/en/teams/alexa-ai" target="_blank">Alexa AI, Amazon</a> supervised by 
-      <a href="https://www.linkedin.com/in/hari-parthasarathi-01b73646/" target="_blank">Hari Parthasarathi</a>
-      where I worked on SQL parsers for constraint decoding in text-to-SQL. Before that, I worked on game testing models as an machine learning intern at 
-      <a href="https://www.ea.com/" target="_blank">Electronic Arts (EA)</a>.
-    </p>
-
-    <p>
-      My undergrad was at the <a href="http://english.cqu.edu.cn/">Chongqing University</a> where I obtained my Bachelor's degree in Software Engineering.
-    </p>
-
-    <p>
-      My research focuses on NLP and DL. I'm also interested in ML in the industry, e.g. MLOps.
-    </p>
-
+        <tr> 
+          <th scope="row">Jan. 2022 - Apr. 2022</th>
+          <td>
+            <p class="job-title">Machine Learning Intern</p>
+            <p class="company"> Electronic Arts (EA) </p>
+            <div>
+              <ul>
+                <li>Collaborated with technical artists to develop an automated system that facilitated game assets validation and anomaly detection for Madden NFL. Used Python scripts to capture game-play data to detect visual anomalies.</li>
+              </ul>
+            </div>
+          </td>
+        </tr> 
+      </tbody>
+    </table>
   </div>
-
-
 
 </body>
 

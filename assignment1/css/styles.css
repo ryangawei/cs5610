@@ -150,3 +150,28 @@ Active navigation item
   margin-top: 0px;
 }
 
+/*Work experience table*/
+.table-work-experience th {
+  font-weight: 500;
+  width: 12em;
+  vertical-align: top;
+}
+
+.table-work-experience td {
+  vertical-align: top;
+}
+
+.job-title {
+  font-weight: 500;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.company {
+  margin-top: 0px;
+}
+
+
+
+
+
