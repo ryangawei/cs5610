@@ -10,7 +10,8 @@
   <meta name="author" content="Guoao Wei" />
   <meta name="description" content="Guoao's website, with links and everything. " />
 
-  <!-- <link rel="stylesheet" href="css/styles.css" /> -->
+
+  <link rel="stylesheet" href="css/styles.css" />
 
   <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -46,27 +47,24 @@
   <header>
 
     <!-- Nav Bar -->
-    <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
+    <nav id="navbar" class="navbar">
       <div class="container">
-        <div class="collapse navbar-collapse text-right" id="navbarNav">
-          <ul class="navbar-nav ml-auto flex-nowrap">
+        <ul class="navbar-nav">
+          <!-- About -->
+          <li class="nav-item active">
+            <a class="nav-link" href="/">about<span class="sr-only">(current)</span></a>
+          </li>
+          
+          <!-- Education -->
+          <li class="nav-item ">
+            <a class="nav-link" href="/education/">education</a>
+          </li>
 
-            <!-- About -->
-            <li class="nav-item active">
-              <a class="nav-link" href="/">about<span class="sr-only">(current)</span></a>
-            </li>
-            
-            <!-- Education -->
-            <li class="nav-item ">
-              <a class="nav-link" href="/education/">education</a>
-            </li>
-
-            <!-- Work Experience -->
-            <li class="nav-item ">
-              <a class="nav-link" href="/work_experience/">work experience</a>
-            </li>
-          </ul>
-        </div>
+          <!-- Work Experience -->
+          <li class="nav-item ">
+            <a class="nav-link" href="/work_experience/">work experience</a>
+          </li>
+        </ul>
       </div>
     </nav>
   </header>
