@@ -31,8 +31,8 @@ strong {
 body {
   background-color: var(--global-bg-color);
   font-family: 'Noto Sans', sans-serif;
-  padding-left: 50px;
-  padding-right: 50px;
+  margin-left: 10vw;
+  margin-right: 10vw;
 }
 
 /*
