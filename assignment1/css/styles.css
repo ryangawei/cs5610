@@ -109,7 +109,21 @@ Active navigation item
   /* border: 2px solid green; */
 }
 
-h2::first-letter {
+.picture-box {
+  margin-inline-end: 0px;
+}
+
+.profile-picture {
+  float: right;
+  border-radius: 1%;
+  margin-left: 20px;
+  /* border: 2px solid green; */
+  
+  max-height: 38%;
+  max-width: 38%;
+}
+
+/* h2::first-letter {
   font-size: 3rem;
 }
 
@@ -121,5 +135,5 @@ h2::first-letter {
   border: 2px dashed;
   margin-top: 10px;
   margin-bottom: 10px;
-}
+} */
 
