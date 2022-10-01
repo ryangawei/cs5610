@@ -81,7 +81,7 @@ Active navigation item
 */
 .navbar .navbar-nav .nav-item.active > .nav-link {
   background-color: inherit;
-  font-weight: bolder;
+  font-weight: 500;
   color: var(--global-theme-color);
 }
 
@@ -111,7 +111,7 @@ Active navigation item
   font-family: 'Noto Sans JP', sans-serif;
   margin-top: 30px;
   margin-bottom: 0px;
-  font-weight: normal;
+  font-weight: 400;
 }
 
 .desc {
@@ -134,17 +134,19 @@ Active navigation item
   max-width: 370px;
 }
 
-/* h2::first-letter {
-  font-size: 3rem;
+/*Education table*/
+.table-education th {
+  font-weight: 500;
+  width: 12em;
+  vertical-align: top;
 }
 
-#job_title {
-  font-weight: bold;
+.table-education td {
+  vertical-align: top;
 }
 
-.experience,.education {
-  border: 2px dashed;
-  margin-top: 10px;
-  margin-bottom: 10px;
-} */
+.degree {
+  font-weight: 500;
+  margin-top: 0px;
+}
 
