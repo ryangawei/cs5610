@@ -30,7 +30,7 @@ strong {
 
 body {
   background-color: var(--global-bg-color);
-  font-family: 'Roboto', sans-serif;  /*TODO: change font*/
+  font-family: 'Noto Sans', sans-serif;
   padding-left: 50px;
   padding-right: 50px;
 }
