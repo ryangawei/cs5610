@@ -171,6 +171,31 @@ Active navigation item
   margin-top: 0px;
 }
 
+footer.fixed-bottom {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background: var(--global-footer-bg-color);
+}
+
+.footer-content {
+  padding-top: 9px;
+  padding-bottom: 8px;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  color: var(--global-footer-text-color) !important;
+}
+
+.contact-icons > a {
+  color: var(--global-footer-text-color) !important;
+  transition: all 200ms !important;
+}
+
+.contact-icons > a:hover {
+  color: var(--global-hover-color) !important;
+}
+
 
 
 
