@@ -122,16 +122,19 @@ Active navigation item
 
 .picture-box {
   margin-inline-end: 0px;
+  float: right;
+  margin-left: 20px;
 }
 
 .profile-picture {
-  float: right;
   border-radius: 1%;
-  margin-left: 20px;
-  /* border: 2px solid green; */
-  
   max-height: 370px;
   max-width: 370px;
+}
+
+.picture-caption {
+  font-style: italic;
+  text-align: center;
 }
 
 /*Education table*/
@@ -190,6 +193,7 @@ footer.fixed-bottom {
 .contact-icons > a {
   color: var(--global-footer-text-color) !important;
   transition: all 200ms !important;
+  margin: 3px;
 }
 
 .contact-icons > a:hover {
