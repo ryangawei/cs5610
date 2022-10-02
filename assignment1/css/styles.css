@@ -153,6 +153,11 @@ Active navigation item
   margin-top: 0px;
 }
 
+.neu-seal {
+  max-height: 150px;
+  max-width: 150px;
+}
+
 /*Work experience table*/
 .table-work-experience th {
   font-weight: 500;
