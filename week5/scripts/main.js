@@ -23,7 +23,7 @@
 // result_p.textContent += ` ${area}`;
 
 let shoppingListElement = document.querySelector(".shopping");
-let shoppingItems = ["bread", "cheese", "pepper"];
+let shoppingItems = ["bread", "cheese", "green pepper"];
 
 function populateList(arr) {
     for (let item of shoppingItems) {
@@ -40,4 +40,18 @@ function squareListItems() {
     shoppingListElement.classList.add("squareList");
 }
 
-squareListItems()
+squareListItems();
+
+function greeItems() {
+    for (let item of document.querySelectorAll(".shopping li"))
+    {
+        // console.log(item);
+        if (item.innerText.includes("green")) {
+            // console.log(item);
+            item.classList.add("greenText");
+        }
+    }
+
+}
+
+greeItems();
