@@ -34,3 +34,10 @@ function populateList(arr) {
 }
 
 populateList(shoppingItems);
+
+function squareListItems() {
+    // shoppingListElement.setAttribute("class", "squareList");
+    shoppingListElement.classList.add("squareList");
+}
+
+squareListItems()
