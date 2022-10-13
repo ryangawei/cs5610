@@ -76,10 +76,21 @@ function changeButtonText() {
 let shoppingCartImage = document.querySelector("#shoppingCart");
 clickButton.addEventListener("click", updateImage, {once: true});
 
-function updateImage() {
+function updateImage(event) {
+    console.log(event);
     shoppingCartImage.src = "images/shoppingCart.png";
     shoppingCartImage.alt = "shopping cart";
     shoppingCartImage.width = 50;
     shoppingCartImage.height = 50;
 }
 
+let buttons = document.querySelectorAll("#buttonContainer button");
+
+for (let b of buttons) {
+    b.addEventListener("mouseover", changeButtonBGColor);
+}
+
+function changeButtonBGColor (event) {
+    // console.log(event);
+    event.target.style.backgroundColor = event.target.innerText;
+}
