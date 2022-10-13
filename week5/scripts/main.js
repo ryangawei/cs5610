@@ -72,3 +72,14 @@ function changeButtonText() {
         clickButton.innerText = "Click Me!";
     }
 }
+
+let shoppingCartImage = document.querySelector("#shoppingCart");
+clickButton.addEventListener("click", updateImage, {once: true});
+
+function updateImage() {
+    shoppingCartImage.src = "images/shoppingCart.png";
+    shoppingCartImage.alt = "shopping cart";
+    shoppingCartImage.width = 50;
+    shoppingCartImage.height = 50;
+}
+
