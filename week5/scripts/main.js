@@ -69,14 +69,18 @@ function greeItems() {
 greeItems();
 
 let clickButton = document.querySelector("#updateImage");
+clickButton.innerText = localStorage.getItem("buttonText") != null? localStorage.getItem("buttonText"): "Click Me!";
+
 clickButton.addEventListener("click", changeButtonText);
 function changeButtonText() {
     if (clickButton.innerText === "Click Me!")
     {
         clickButton.innerText = "Clicked!";
+        localStorage.setItem("buttonText", clickButton.innerText);
     }
     else if (clickButton.innerText = "Clicked!") {
         clickButton.innerText = "Click Me!";
+        localStorage.setItem("buttonText", clickButton.innerText);
     }
 }
 
