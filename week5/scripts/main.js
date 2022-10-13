@@ -25,6 +25,13 @@
 let shoppingListElement = document.querySelector(".shopping");
 let shoppingItems = ["bread", "cheese", "green pepper"];
 
+shoppingListElement.addEventListener("click", strickThrough);
+
+function strickThrough(event) {
+    event.target.innerHTML = `<del>${event.target.innerText}</del>`;
+}
+
+
 function populateList(arr) {
     for (let item of shoppingItems) {
         let li = document.createElement("li");
@@ -84,11 +91,13 @@ function updateImage(event) {
     shoppingCartImage.height = 50;
 }
 
-let buttons = document.querySelectorAll("#buttonContainer button");
+// let buttons = document.querySelectorAll("#buttonContainer button");
+let buttonContainer = document.querySelector("#buttonContainer");
 
-for (let b of buttons) {
-    b.addEventListener("mouseover", changeButtonBGColor);
-}
+// for (let b of buttons) {
+//     b.addEventListener("mouseover", changeButtonBGColor);
+// }
+buttonContainer.addEventListener("mouseover", changeButtonBGColor);
 
 function changeButtonBGColor (event) {
     // console.log(event);
