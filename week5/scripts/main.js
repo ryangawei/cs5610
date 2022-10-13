@@ -43,15 +43,32 @@ function squareListItems() {
 squareListItems();
 
 function greeItems() {
-    for (let item of document.querySelectorAll(".shopping li"))
-    {
-        // console.log(item);
+    let itemList = document.querySelectorAll(".shopping li");
+    itemList.forEach((item) => {
         if (item.innerText.includes("green")) {
-            // console.log(item);
             item.classList.add("greenText");
         }
-    }
-
+    })
+    // for (let item of document.querySelectorAll(".shopping li"))
+    // {
+    //     // console.log(item);
+    //     if (item.innerText.includes("green")) {
+    //         // console.log(item);
+    //         item.classList.add("greenText");
+    //     }
+    // }
 }
 
 greeItems();
+
+let clickButton = document.querySelector("#updateImage");
+clickButton.addEventListener("click", changeButtonText);
+function changeButtonText() {
+    if (clickButton.innerText === "Click Me!")
+    {
+        clickButton.innerText = "Clicked!";
+    }
+    else if (clickButton.innerText = "Clicked!") {
+        clickButton.innerText = "Click Me!";
+    }
+}
