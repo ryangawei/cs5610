@@ -53,6 +53,12 @@ a:visited {
   color: #00287e;
 }
 
+.navbar-header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
 /*
 Styles for navigation bar
 */
