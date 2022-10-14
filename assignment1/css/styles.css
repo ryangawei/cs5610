@@ -69,10 +69,8 @@ Styles for navigation bar
   padding: 0; /*Make the bar left align*/
   margin-top: 0px;
   padding-top: 10px;
-}
-
-.navbar .navbar-nav .nav-item {
-  display:inline-block;
+  display: flex;
+  justify-content: center;
 }
 
 /*
