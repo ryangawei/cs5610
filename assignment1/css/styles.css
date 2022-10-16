@@ -140,18 +140,6 @@ html[data-theme="dark"] .fa-moon {
   display: none;
 }
 
-/* header {
-  text-align: center;
-  border-bottom: darkslateblue 2px dotted;
-  padding: 5px;
-} */
-
-/* h1 {
-  color: #1050aa; 
-  font-family: Georgia, 'Times New Roman', Times, serif; 
-  font-size: 2.2em;
-} */
-
 .font-weight-bold {
   font-weight: 700;
 }
@@ -190,6 +178,15 @@ html[data-theme="dark"] .fa-moon {
 .picture-caption {
   font-style: italic;
   text-align: center;
+}
+
+.time-container {
+  display: flex;
+}
+
+.radio-form {
+  max-width: 200px;
+  margin-right: 20px;
 }
 
 /*Education table*/
