@@ -37,10 +37,13 @@
       src="https://kit.fontawesome.com/d6279915aa.js"
       crossorigin="anonymous"
     ></script>
+
+    <!-- Custom Scripts -->
+    <script defer src="scripts/theme.js"></script>
   </head>
 
   <body>
-    <header>
+    <header class="navbar-header">
       <!-- Nav Bar -->
       <nav id="navbar" class="navbar">
         <div class="container">
@@ -61,6 +64,14 @@
                 >work experience</a
               >
             </li>
+
+            <div class="toggle-container">
+              <a class="light-toggle" href="javascript:;">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+              </a>
+            </div>
+
           </ul>
         </div>
       </nav>
@@ -82,11 +93,13 @@
               <td>
                 <figure class="picture-box">
                   <picture>
-                    <img
-                      class="neu-seal"
-                      src="assets/img/Northeastern_University_seal.svg"
-                      alt="neu-seal"
-                    />
+                    <a href="https://www.northeastern.edu/">
+                      <img
+                        class="neu-seal"
+                        src="assets/img/Northeastern_University_seal.svg"
+                        alt="neu-seal"
+                      />
+                    </a>
                   </picture>
                 </figure>
 
@@ -110,9 +123,22 @@
                   </a>
                 </p>
                 <p>
-                  Relevant coursework: CS5010 Program Design Paradigm, CS5800
-                  Algorithms, CS6140 Machine Learning, CS6120 Natural Language
-                  Processing,
+                  <!-- Use list for courses -->
+                  Relevant coursework:
+                  <ul>
+                    <li>
+                      CS5010 Program Design Paradigm
+                    </li>
+                    <li>
+                      CS5800 Algorithms
+                    </li>
+                    <li>
+                      CS6140 Machine Learning
+                    </li>
+                    <li>
+                      CS6120 Natural Language Processing
+                    </li>
+                  </ul>
                 </p>
               </td>
             </tr>

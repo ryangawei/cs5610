@@ -37,11 +37,15 @@
       src="https://kit.fontawesome.com/d6279915aa.js"
       crossorigin="anonymous"
     ></script>
+
+    <!-- Custom Scripts -->
+    <script defer src="scripts/theme.js"></script>
+    <script type="module" src="scripts/display_time.js"></script>
   </head>
 
   <body>
     <!-- Header -->
-    <header>
+    <header class="navbar-header">
       <!-- Nav Bar -->
       <nav id="navbar" class="navbar">
         <div class="container">
@@ -62,6 +66,14 @@
                 >work experience</a
               >
             </li>
+
+            <div class="toggle-container">
+              <a class="light-toggle" href="javascript:;">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+              </a>
+            </div>
+
           </ul>
         </div>
       </nav>
@@ -140,6 +152,32 @@
               the industry, e.g. MLOps.
             </p>
           </div>
+          
+          <br>
+
+          <section class="time-container">
+            <form class="radio-form">
+              <fieldset>
+                <legend>Display time/date:</legend>
+                <div>
+                  <input type="radio" id="formatChoice1"
+                  name="format" value="date" checked>
+                  <label for="contactChoice1">Date</label>
+                  <input type="radio" id="formatChoice2"
+                  name="format" value="time">
+                  <label for="formatChoice2">Time</label>
+                </div>
+                <div>
+                  <button type="submit">Submit</button>
+                </div>
+              </fieldset>
+            </form>
+            <!-- <span class="time-display">How are you doing?</span> -->
+          </section>
+
+          <br>
+          <br>
+
         </div>
       </article>
     </div>
