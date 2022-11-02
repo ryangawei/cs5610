@@ -1,13 +1,17 @@
 const express = require("express");
 const router = express.Router();
 const axios = require("axios");
+const { addToDB, readAll, readOne } = require("../db");
+const path = require("path");
+
+router.get("/newtask", async function (req, res) {
+  res.sendFile(path.join(__dirname, "../public", "newTask.html"));
+});
 
 router.get("/", async function (req, res) {
   try {
-    const response = await axios.get(
-      "https://jsonplaceholder.typicode.com/todos"
-    );
-    res.status(response.status).json(response.data);
+    const data = await readAll();
+    res.json(data);
   } catch (err) {
     console.log(err);
   }
@@ -23,12 +27,14 @@ router.get("/", async function (req, res) {
 
 router.get("/:taskId", async function (req, res) {
   try {
-    const todoResponse = await axios.get(
-      `https://jsonplaceholder.typicode.com/todos/${req.params.taskId}`
-    );
-    const userResponse = await axios.get(
-      `https://jsonplaceholder.typicode.com/users/${todoResponse.data.userId}`
-    );    
+    // const todoResponse = await axios.get(
+    //   `https://jsonplaceholder.typicode.com/todos/${req.params.taskId}`
+    // );
+    // const userResponse = await axios.get(
+    //   `https://jsonplaceholder.typicode.com/users/${todoResponse.data.userId}`
+    // );
+    const data = await readOne({
+    });
 
     res.render("task", {
       id: todoResponse.data.id,
@@ -51,6 +57,11 @@ router.get("/:taskId", async function (req, res) {
 router.get("/:taskId/users/:userId", function (req, res) {
   console.log(req.params);
   res.send(`You are viewing task with id ${req.params.taskId}`);
+});
+
+router.post("/", async function (req, res) {
+  await addToDB(req.body);
+  res.redirect(`https://jsonplaceholder.typicode.com/todos/1`);
 });
 
 module.exports = router;
