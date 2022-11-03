@@ -1,5 +1,28 @@
 extends layout
 
-block content
-  h1= title
-  p Welcome to #{title}
+block content 
+  body 
+    main
+      section.py-5.text-center.container
+        .row.py-lg-5
+          .col-lg-6.col-md-8.mx-auto
+            h1.fw-light Cats for Adoption
+            p.lead.text-muted See our featured cats and take them home!
+      .container
+        .row.row-cols-1.row-cols-sm-2.row-cols-md-3.g-3
+          .col.text-center
+            .card
+              .card-body
+                h5#name.card-title Special title treatment
+                h6#sex_age.card-subtitle.mb-2.text-muted Female - 1 years old
+                h6#breed.card-subtitle.mb-2.text-muted Domestic hort Hair
+                // <h7 id="location" class="card-subtitle mb-2 text-muted">Vancouver, B.C</h6>
+                p#location.card-text Vancouver B.C
+                .btn-group
+                  button#view_btn.btn.btn-sm.btn-outline-secondary(type='button') View
+                  button#delete_btn.btn.btn-sm.btn-outline-secondary(type='button') Delete
+          .col.text-center.align-self-center
+            button#add_btn.btn.btn-primary(type='button') Add
+
+
+
