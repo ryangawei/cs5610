@@ -24,13 +24,13 @@ block content
             .col.text-center
               .card
                 .card-body
-                  h5#name.card-title= item.name
-                  h6#sex_age.card-subtitle.mb-2.text-muted Female - 1 years old
-                  h6#breed.card-subtitle.mb-2.text-muted Domestic hort Hair
-                  p#location.card-text Vancouver B.C
+                  h5#name.card-title #{item.name}
+                  h6#sex_age.card-subtitle.mb-2.text-muted #{item.sex} - #{item.age}
+                  h6#breed.card-subtitle.mb-2.text-muted #{item.breed}
+                  p#location.card-text #{item.city} #{item.province}
                   .btn-group
-                    button#view_btn.btn.btn-sm.btn-outline-secondary(type='button') View
-                    button#delete_btn.btn.btn-sm.btn-outline-secondary(type='button') Delete
+                    button.btn.btn-sm.btn-outline-secondary(id=`view_btn_${item.card_id}` type='button') View
+                    button.btn.btn-sm.btn-outline-secondary(id=`delete_btn_${item.card_id}` type='button') Delete
             
 
           .col.text-center.align-self-center
