@@ -1,11 +1,24 @@
 const express = require('express');
 const router = express.Router();
-const db = require("./db");
+const db_crud = require("../db_crud");
 
 /* GET home page. */
 router.get('/', async function(req, res, next) {
+  try {
+    await db_crud.connectToDB();
+  } catch (e) {
+    console.log(e);
+  }
+
   // Display cat data from db
-  const data = await db.readAll();
+  let data = [];
+  try {
+    data = await db_crud.readAll();
+  } catch (e) {
+    console.log(e);
+  } finally {
+    db_crud.disconnectFromDB();
+  }
 
   const items = [];
 
