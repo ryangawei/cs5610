@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const db = require("../public/javascripts/db");
+const db = require("./db");
 
 /* GET home page. */
 router.get('/', async function(req, res, next) {
@@ -25,7 +25,7 @@ router.get('/', async function(req, res, next) {
     }
 
     item = {
-      _id: doc._id,
+      doc_id: doc._id,
       card_id: i,
       name: doc.name,
       sex: sex,
