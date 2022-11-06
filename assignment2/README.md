@@ -19,7 +19,7 @@ It supports CRUD operations on cats' records.
    Debugger listening on ws://127.0.0.1:8508/e6c8ee90-549d-4d19-95e1-5ab21c4c3a89
    For help, see: https://nodejs.org/en/docs/inspector
    Debugger attached.
-   App listening to port 3000
+   App listening to port 10000
    ```
 
-4. Client accesses service using `localhost:3000`
+4. Client accesses service using `localhost:10000`

@@ -9,7 +9,7 @@ for (const viewButton of matches) {
     const card = e.target.parentElement.parentElement.parentElement;
     const doc_id = card.getAttribute("doc_id");
 
-    const response = await fetch(`http://localhost:3000/api/db/read?doc_id=${doc_id}`);
+    const response = await fetch(`http://localhost:10000/api/db/read?doc_id=${doc_id}`);
     const doc = await response.json();
 
     const staticId = document.getElementById("staticId");
@@ -48,7 +48,7 @@ for (const deleteButton of matches) {
     const card = e.target.parentElement.parentElement.parentElement;
     const doc_id = card.getAttribute("doc_id");
 
-    const response = await fetch(`http://localhost:3000/api/db/delete?doc_id=${doc_id}`);
+    const response = await fetch(`http://localhost:10000/api/db/delete?doc_id=${doc_id}`);
     // console.log(response);
     location.reload();
     }
