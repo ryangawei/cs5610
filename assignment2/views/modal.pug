@@ -6,7 +6,11 @@
         h5.modal-title Detail
         button.btn-close(type='button', data-bs-dismiss='modal', aria-label='Close')
       .modal-body
-        form#inputForm.needs-validation(action="http://localhost:3000/api/db/upsert", method="post")
+        form#inputForm.needs-validation(action="http://localhost:3000/api/db/update", method="post")
+          .mb-3.row
+            label.col-sm-2.col-form-label(for='staticId') ID
+            .col-sm-10
+              input#staticId.form-control-plaintext(readonly type='text', name='doc_id', aria-describedby='ID')
           .mb-3
             label.form-label(for='inputName') Name
             input#inputName.form-control(type='text', name='name', aria-describedby='Name', required)

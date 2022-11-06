@@ -13,6 +13,9 @@ for (const viewButton of matches) {
 
     const response = await fetch(`http://localhost:3000/api/db/read?doc_id=${doc_id}`);
     const doc = await response.json();
+
+    const staticId = document.getElementById("staticId");
+    staticId.value = doc_id;
     
     const inputName = document.getElementById("inputName");
     inputName.value = doc.name;
