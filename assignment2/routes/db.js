@@ -1,6 +1,6 @@
 const express = require("express");
 const { ObjectId } = require("mongodb");
-const { body, validationResult } = require("express-validator");
+const { body, query, validationResult } = require("express-validator");
 const db_crud = require("../db_crud");
 
 // Router that serves the crud services
@@ -65,5 +65,28 @@ router.post(
     }
   }
 );
+
+router.get("/delete", 
+  query("doc_id").isAlphanumeric(),
+  async function (req, res) {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(400).json({ errors: errors.array() });
+    }
+
+    try {
+      await db_crud.connectToDB();
+
+      const doc_id = req.query.doc_id;
+
+      const result = await db_crud.deleteOne({ _id: ObjectId(doc_id) });
+      console.log(result);
+      return res.redirect(`back`);
+    } catch (e) {
+      console.log(e);
+    } finally {
+      db_crud.disconnectFromDB();
+    }
+});
 
 module.exports = router;

@@ -30,6 +30,11 @@ async function insertOne(doc) {
   return result;
 }
 
+async function deleteOne(query) {
+  const result = await client.db("cs5610").collection("cats").deleteOne(query);
+  return result;
+}
+
 async function disconnectFromDB() {
   await client.close();
   console.log("Disconnect from db.");
@@ -41,5 +46,6 @@ module.exports = {
   readAll: readAll,
   readOne: readOne,
   insertOne: insertOne,
+  deleteOne: deleteOne,
   disconnectFromDB: disconnectFromDB,
 };
