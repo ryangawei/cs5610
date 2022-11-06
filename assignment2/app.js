@@ -6,7 +6,6 @@ var logger = require('morgan');
 
 // Import routers
 var indexRouter = require('./routes/index');
-var modalRouter = require('./routes/modal');
 var dbRouter = require('./routes/db');
 
 var app = express();
@@ -22,7 +21,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/modal', modalRouter);
 app.use('/api/db', dbRouter);
 
 // catch 404 and forward to error handler
