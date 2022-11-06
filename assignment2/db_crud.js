@@ -20,7 +20,12 @@ async function readOne(query) {
   return data;
 }
   
-async function insert(doc) {
+async function updateOne(query, doc, options) {
+  const result = await client.db("cs5610").collection("cats").updateOne(query, doc, options);
+  return result;
+}
+
+async function insertOne(doc) {
   const result = await client.db("cs5610").collection("cats").insertOne(doc);
   return result;
 }
@@ -32,8 +37,9 @@ async function disconnectFromDB() {
 
 module.exports = {
   connectToDB: connectToDB,
-  insert: insert,
+  updateOne: updateOne,
   readAll: readAll,
   readOne: readOne,
+  insertOne: insertOne,
   disconnectFromDB: disconnectFromDB,
 };
