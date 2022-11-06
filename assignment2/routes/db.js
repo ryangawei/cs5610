@@ -29,10 +29,10 @@ router.get("/read", async function (req, res) {
 });
 
 router.post(
-  "/upsert",
+  "/update",
   body("name").isAlpha("en-US", {ignore: " "}).isLength({ min: 1 }),
   body("sex").isAlpha().isLength({ min: 1 }),
-  body("date_of_birth").isISO8601().toDate(),
+  body("date_of_birth").isISO8601().isBefore().toDate(),
   body("breed").isAlpha("en-US", {ignore: " "}).isLength({ min: 1 }),
   body("city").isAlpha("en-US", {ignore: " "}).isLength({ min: 1 }),
   body("province").isAlpha("en-US", {ignore: " "}).isLength({ min: 1 }),
@@ -48,9 +48,16 @@ router.post(
 
       const data = req.body;
 
-      const result = await db_crud.insert(data);
-      console.log(result);
+      let result;
+      // If Id exists, update record. If not, add new record
+      if (data.doc_id) {
+        result = await db_crud.updateOne({_id: ObjectId(data.doc_id)}, {$set: data});
+      } else {
+        result = await db_crud.insertOne(data);
+      }
 
+      console.log(result);
+      return res.redirect(`back`);
     } catch (e) {
       console.log(e);
     } finally {
