@@ -9,7 +9,7 @@ for (const viewButton of matches) {
     const card = e.target.parentElement.parentElement.parentElement;
     const doc_id = card.getAttribute("doc_id");
 
-    const response = await fetch(`http://localhost:10000/api/db/read?doc_id=${doc_id}`);
+    const response = await fetch(`/api/db/read?doc_id=${doc_id}`);
     const doc = await response.json();
 
     const staticId = document.getElementById("staticId");
@@ -40,7 +40,6 @@ for (const viewButton of matches) {
 // Delete button of each card
 matches = document.querySelectorAll('[id^="deleteButton"]');
 
-// Show cat details
 for (const deleteButton of matches) {
     deleteButton.addEventListener("click", async (e) => {
     e.preventDefault()
@@ -48,7 +47,7 @@ for (const deleteButton of matches) {
     const card = e.target.parentElement.parentElement.parentElement;
     const doc_id = card.getAttribute("doc_id");
 
-    const response = await fetch(`http://localhost:10000/api/db/delete?doc_id=${doc_id}`);
+    const response = await fetch(`/api/db/delete?doc_id=${doc_id}`);
     // console.log(response);
     location.reload();
     }
