@@ -1,0 +1,9 @@
+.headerContainer {
+
+  border: slateblue 1px solid;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2em;
+  margin: 2em;
+}
