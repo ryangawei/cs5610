@@ -1,9 +1,18 @@
 .headerContainer {
-
   border: slateblue 1px solid;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 2em;
   margin: 2em;
+}
+
+.taskContainer {
+  background-color: antiquewhite;
+  margin: 1em;
+  padding: 1em; 
+}
+
+.iconNameContainer {
+  display: flex;
 }
