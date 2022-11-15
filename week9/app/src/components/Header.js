@@ -5,7 +5,7 @@ export default function Header(props) {
   return (
     <header className="headerContainer">
       <h1>Welcome to {props.name}</h1>
-      <button>Add Task</button>
+      <button onClick={props.onAddTaskToggle}>Add Task</button>
     </header>
   );
 }
