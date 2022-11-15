@@ -3,7 +3,7 @@ import Task from "./Task";
 
 
 function TaskList() {
-  const [tasks, userTasks] = useState([
+  const [tasks, setTasks] = useState([
     {
       id: 1,
       title: "Review week 9 material",
@@ -23,8 +23,13 @@ function TaskList() {
 
   const deletePressed = (deletedId) => {
     console.log("Clicked " + deletedId);
+    setTasks(tasks.filter((item) => item.id !== deletedId));
   };
 
+  if (tasks.length === 0) {
+    return <li>No tasks left</li>;
+  } 
+  
   return (
     <>
       { tasks.map((item) => { return <Task key={item.id} task={item} deleteHandler={deletePressed} />; }) }
