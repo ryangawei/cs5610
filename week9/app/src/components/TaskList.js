@@ -1,29 +1,37 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Task from "./Task";
 
 
 function TaskList() {
-  const [tasks, setTasks] = useState([
-    {
-      id: 1,
-      title: "Review week 9 material",
-      date: "June 4th at 1 pm",
-    },
-    {
-      id: 2,
-      title: "Do quiz 9",
-      date: "June 4th at 6 pm",
-    },
-    {
-      id: 3,
-      title: "Work on assignment 2",
-      date: "June 5th at 8 am",
-    },
-  ]);
+  const [tasks, setTasks] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
-  const deletePressed = (deletedId) => {
-    console.log("Clicked " + deletedId);
-    setTasks(tasks.filter((item) => item.id !== deletedId));
+  useEffect(() => {
+    const fetchData = async() => {
+      try {
+        const response = await fetch("http://localhost:5000/tasks");
+        if (!response.ok) {
+          throw new Error("HTTP error! Status: ", response.status);
+        }
+        const data = await response.json();
+        console.log(data);
+
+        setTasks(data);
+
+      } catch (err) {
+        console.log("Fetch data ", err);
+      }
+    }
+
+    fetchData();
+  }, [])
+
+  const deletePressed = async (deletedId) => {
+    // console.log("Clicked " + deletedId);
+    // setTasks(tasks.filter((item) => item.id !== deletedId));
+    const response = await fetch(`http://localhost:5000/tasks/${deletedId}`, {
+      method: "DELETE"
+    });
   };
 
   if (tasks.length === 0) {
