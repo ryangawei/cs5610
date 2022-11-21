@@ -1,0 +1,36 @@
+// Modal
+#detailModal.modal(tabindex='-1')
+  .modal-dialog.modal-dialog-centered
+    .modal-content
+      .modal-header
+        h5.modal-title Detail
+        button.btn-close(type='button', data-bs-dismiss='modal', aria-label='Close')
+      .modal-body
+        form#inputForm.needs-validation(action=`/api/db/update`, method="post")
+          .mb-3.row
+            label.col-sm-2.col-form-label(for='staticId') ID
+            .col-sm-10
+              input#staticId.form-control-plaintext(readonly type='text', name='doc_id', aria-describedby='ID')
+          .mb-3
+            label.form-label(for='inputName') Name
+            input#inputName.form-control(type='text', name='name', aria-describedby='Name', required)
+          .mb-3
+            label.form-label(for='inputSex') Sex
+            select#inputSex.form-select(name='sex', aria-label='Default select example', required)
+              option(selected='', value='male') Male
+              option(value='female') Female
+          .mb-3
+            label.form-label(for='inputDOB') Date of birth
+            input#inputDOB.form-control(type='date', name='date_of_birth', aria-describedby='Date of birth', required)
+          .mb-3
+            label.form-label(for='inputBreed') Breed
+            input#inputBreed.form-control(type='text', name='breed', aria-describedby='Breed', required)
+          .mb-3
+            label.form-label(for='inputCity') City
+            input#inputCity.form-control(type='text', name='city', aria-describedby='City', required)
+          .mb-3
+            label.form-label(for='inputProvince') Province
+            input#inputProvince.form-control(type='text', name='province', aria-describedby='Province', required)
+      .modal-footer
+        button.btn.btn-secondary(type='button', data-bs-dismiss='modal') Close
+        button.btn.btn-primary(type='submit', form='inputForm') Save changes

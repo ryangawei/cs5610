@@ -1,0 +1,44 @@
+extends layout
+
+block content 
+  body 
+    main
+      section.py-5.text-center.container
+        .row.py-lg-5
+          .col-lg-6.col-md-8.mx-auto
+            h1.fw-light Cats for Adoption
+            p.lead.text-muted See our featured cats and take them home!
+      .container
+        .row.row-cols-1.row-cols-sm-2.row-cols-md-3.g-3
+          //- .col.text-center
+          //-   .card
+          //-     .card-body
+          //-       h5#name.card-title Special title treatment
+          //-       h6#sex_age.card-subtitle.mb-2.text-muted Female - 1 years old
+          //-       h6#breed.card-subtitle.mb-2.text-muted Domestic hort Hair
+          //-       p#location.card-text Vancouver B.C
+          //-       .btn-group
+          //-         button#view_btn.btn.btn-sm.btn-outline-secondary(type='button') View
+          //-         button#delete_btn.btn.btn-sm.btn-outline-secondary(type='button') Delete
+          each item in items
+            .col.text-center
+              .card(doc_id=item.doc_id)
+                .card-body
+                  h5#name.card-title #{item.name}
+                  h6#sex_age.card-subtitle.mb-2.text-muted #{item.sex} - #{item.age}
+                  h6#breed.card-subtitle.mb-2.text-muted #{item.breed}
+                  p#location.card-text #{item.city} #{item.province}
+                  .btn-group
+                    button.btn.btn-sm.btn-outline-secondary(id=`viewButton${item.card_id}` type='button' data-bs-toggle='modal', data-bs-target='#detailModal') View
+                    button.btn.btn-sm.btn-outline-secondary(id=`deleteButton${item.card_id}` type='button') Delete
+            
+
+          .col.text-center.align-self-center
+            button#addButton.btn.btn-primary(type='button', data-bs-toggle='modal', data-bs-target='#detailModal')
+              | Add
+            //- button#add_btn.btn.btn-primary(type='button') Add
+          include modal.pug
+            
+    script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous")
+
+
