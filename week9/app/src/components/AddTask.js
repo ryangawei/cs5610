@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function AddTask() {
   const [title, setTitle] = useState("");
   const [date, setDate] = useState("");
+  let navigate = useNavigate();
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -22,6 +24,8 @@ export default function AddTask() {
     } catch (err) {
       console.log(err);
     }
+
+    navigate("/tasks");
   }
 
   return (

@@ -21,3 +21,7 @@
 }
 .form-control label{ margin-right: 10px;
 }
+
+nav a {
+  margin: 2em;
+}
