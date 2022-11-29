@@ -1,0 +1,36 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Jack",
+      "task": 1
+    },
+    {
+      "id": 2,
+      "name": "Dan",
+      "task": 2
+    }
+  ],
+  "tasks": [
+    {
+      "id": 2,
+      "title": "Do quiz 9",
+      "date": "June 4th at 6 pm"
+    },
+    {
+      "id": 3,
+      "title": "Work on assignment 2",
+      "date": "June 5th at 8 am"
+    },
+    {
+      "title": "Get some food",
+      "date": "Today",
+      "id": 4
+    },
+    {
+      "title": "asdfasdasdf",
+      "date": "asdfadsf",
+      "id": 5
+    }
+  ]
+}

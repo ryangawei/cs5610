@@ -1,0 +1,27 @@
+.headerContainer {
+  border: slateblue 1px solid;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2em;
+  margin: 2em;
+}
+
+.taskContainer {
+  background-color: antiquewhite;
+  margin: 1em;
+  padding: 1em; 
+}
+
+.iconNameContainer {
+  display: flex;
+}
+
+.form-control { margin: 20px 0; display:flex;
+}
+.form-control label{ margin-right: 10px;
+}
+
+nav a {
+  margin: 2em;
+}
