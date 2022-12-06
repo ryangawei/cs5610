@@ -12,7 +12,7 @@ export default function AddTask() {
     console.log(data);
     
     try {
-      const response = await fetch("http://localhost:5000/tasks", {
+      const response = await fetch("http://localhost:5000/api/tasks", {
         method: "POST",
         headers: {"Content-type": "application/json"},
         body: JSON.stringify(data)
